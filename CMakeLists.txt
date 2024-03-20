@@ -19,52 +19,52 @@ if(NOT googletest_POPULATED)
 endif()
 
 
-add_library(stone_Lib STATIC stonewt.cpp)
+add_library(vegnews_Lib STATIC strngbad.cpp)
 
-add_executable(stone_App stonewt.h stone.cpp)
-target_link_libraries(stone_App 
-    stone_Lib
+add_executable(vegnews_App strngbad.h vegnews.cpp)
+target_link_libraries(vegnews_App 
+vegnews_Lib
 )
 
 
-add_executable(stone_Test gtest_stone.cpp)
-target_link_libraries(stone_Test 
-    stone_Lib
+add_executable(vegnews_Test gtest_vegnews.cpp)
+target_link_libraries(vegnews_Test 
+    vegnews_Lib
     gtest_main
     gmock_main
 )
-set_target_properties(stone_App stone_Lib stone_Test PROPERTIES
+set_target_properties(vegnews_App vegnews_Lib vegnews_Test PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
-target_include_directories(stone_Lib
+target_include_directories(vegnews_Lib
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
 
 if (MSVC)
-    target_compile_options(stone_App PRIVATE
+    target_compile_options(vegnews_App PRIVATE
         /W4
     )
-    target_compile_options(stone_Lib PRIVATE
+    target_compile_options(vegnews_Lib PRIVATE
         /W4
     )
-    target_compile_options(stone_Test PRIVATE
+    target_compile_options(vegnews_Test PRIVATE
         /W4
     )
 else ()
-    target_compile_options(stone_App PRIVATE
+    target_compile_options(vegnews_App PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
-    target_compile_options(stone_Lib PRIVATE
+    target_compile_options(vegnews_Lib PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
-    target_compile_options(stone_Test PRIVATE
+    target_compile_options(vegnews_Test PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
 endif()
 
 
-install(TARGETS stone_App RUNTIME DESTINATION bin)
+install(TARGETS vegnews_App RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
@@ -78,4 +78,4 @@ include(CPack)
 
 enable_testing()
 
-add_test(stone_Test stone_Test)
+add_test(vegnews_Test vegnews_Test)

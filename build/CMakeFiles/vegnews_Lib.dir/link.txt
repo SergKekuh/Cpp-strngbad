@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvegnews_Lib.a CMakeFiles/vegnews_Lib.dir/strngbad.cpp.o
+/usr/bin/ranlib libvegnews_Lib.a

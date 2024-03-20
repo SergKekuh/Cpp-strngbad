@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/vegnews_App.dir/vegnews.cpp.o -o vegnews_App  libvegnews_Lib.a 

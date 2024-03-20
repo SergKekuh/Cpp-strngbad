@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/vegnews_Test.dir/gtest_vegnews.cpp.o -o vegnews_Test  libvegnews_Lib.a lib/libgtest_main.a lib/libgmock_main.a lib/libgmock.a lib/libgtest.a 

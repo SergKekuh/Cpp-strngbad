@@ -22,6 +22,7 @@ StringBad::StringBad()
     len = 4;
     str = new char[4];
     std::strcpy(str, "C++");
+    num_strings++;
     cout << num_strings << ": \"" << str << "\" default object created\n";
 }
 StringBad::~StringBad()
